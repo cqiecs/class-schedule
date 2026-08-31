@@ -1,0 +1,77 @@
+name: Bug 反馈
+description: 报告 App 功能异常或崩溃
+labels: [bug]
+title: "[Bug] "
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: 出问题的页面
+      options:
+        - 登录
+        - 首次使用引导
+        - 今日
+        - 课表
+        - 考试
+        - 设置
+        - 课程提醒（通知）
+        - 其他
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: 设备与系统版本
+      placeholder: 例如 Redmi K60 / Android 14
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: 发生频率
+      options:
+        - 必现
+        - 偶发
+        - 仅出现一次
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 从什么操作开始，依次做了什么
+      placeholder: |
+        1. 打开...
+        2. 点击...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为
+    validations:
+      required: true
+
+  - type: textarea
+    id: media
+    attributes:
+      label: 截图或录屏
+      description: 有助直观定位的请附上
+
+  # - type: textarea
+  #   id: logs
+  #   attributes:
+  #     label: 相关日志
+  #     render: shell
