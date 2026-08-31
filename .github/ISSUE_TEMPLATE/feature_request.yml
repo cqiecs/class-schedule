@@ -1,0 +1,40 @@
+name: 功能建议
+description: 提出新功能或对现有功能的改进想法
+labels: [enhancement]
+title: "[Feature] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎提出想法！描述清楚「为什么需要」比「怎么实现」更重要。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 想解决的问题或场景
+      description: 现在有什么不方便？使用场景是什么？
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 期望的方案
+      description: 你希望它是什么样的？有参考 App 或截图更好
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternative
+    attributes:
+      label: 备选方案
+      description: 其他可行的实现思路，或现有功能勉强能用的方式
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: 所属范围
+      options:
+        - label: 界面 / 交互
+        - label: 提醒 / 通知
+        - label: 其他
